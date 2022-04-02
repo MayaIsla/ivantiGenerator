@@ -15,6 +15,7 @@ response2 = requests.get(
     "https://Tenant.saasit.com/api/odata/businessobject/incidents/QA?ActionId=ActionIDofQA",
     headers=get)
 respond = response2.text
+#the actionID of the get request (saved search) can be find in the metadeta fields.
 
 if "Invalid Request Payload" in respond:
     outlook = win32.Dispatch('outlook.application')
