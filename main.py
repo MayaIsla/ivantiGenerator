@@ -1,0 +1,32 @@
+import requests
+import win32com.client as win32
+
+post = {"Tenant": "", "username": "", "password": "", "role": ""}
+response = requests.post(
+    "https://tenant/api/rest/authentication/login",
+    data=post)
+print(response.text)
+
+token = response.text.replace('"', '')
+print(token)
+
+get = {'Authorization': token}
+response2 = requests.get(
+    "https://Tenant.saasit.com/api/odata/businessobject/incidents/QA?ActionId=ActionIDofQA",
+    headers=get)
+respond = response2.text
+
+if "Invalid Request Payload" in respond:
+    outlook = win32.Dispatch('outlook.application')
+    mail = outlook.CreateItem(0)
+    mail.To = 'Email to be sent to'
+    mail.Subject = 'No Incidents found by this half hour.'
+    mail.Body = respond
+    mail.Send()
+else:
+    outlook = win32.Dispatch('outlook.application')
+    mail = outlook.CreateItem(0)
+    mail.To = 'Email to be sent to'
+    mail.Subject = 'INCIDENT FOUND JSON REQUEST'
+    mail.Body = respond
+    mail.Send()
