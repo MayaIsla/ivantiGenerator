@@ -9,6 +9,7 @@ This is what the Outlook client response would look like when there are live tic
 You may run the batch file with task scheduler to have these emails automated. Please note that the batch file has to be in the same folder as your .py file.
 
 Be sure the batch file has double quotes (") and the 'start in' is the python executable in the SAME directory as your python code.
+
 ![image](https://user-images.githubusercontent.com/43270477/161886789-d4712a48-c633-4d5f-ba8c-d51947f38ebf.png)
 
 You may set the trigger to any event that you want.
