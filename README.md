@@ -2,6 +2,7 @@
 Runs a search in the Ivanti ticketing system for an open ticket. Then uses win32 outlook client package to sync to a local Outlook account. Sends output JSON from the Ivanti Service Manager API in the body of the email if necessary. 
 
 This is what the Outlook client response would look like when there are live tickets open in the queue: 
+
 ![image](https://user-images.githubusercontent.com/43270477/161887204-01323658-6c57-45de-a70f-934fbabbad50.png)
 
 
