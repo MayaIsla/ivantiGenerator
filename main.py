@@ -35,6 +35,6 @@ else:
     outlook = win32.Dispatch('outlook.application')
     mail = outlook.CreateItem(0)
     mail.To = 'Email to be sent to'
-    mail.Subject = strNumOpenIncidents + " Open Incident(s)'
+    mail.Subject = strNumOpenIncidents + " Open Incident(s)"
     #mail.Body = respond
     mail.Send()
