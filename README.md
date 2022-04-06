@@ -1,6 +1,10 @@
 # Readme
 Runs a search in the Ivanti ticketing system for an open ticket. Then uses win32 outlook client package to sync to a local Outlook account. Sends output JSON from the Ivanti Service Manager API in the body of the email if necessary. 
 
+This is what the Outlook client response would look like when there are live tickets open in the queue: 
+![image](https://user-images.githubusercontent.com/43270477/161887204-01323658-6c57-45de-a70f-934fbabbad50.png)
+
+
 You may run the batch file with task scheduler to have these emails automated. Please note that the batch file has to be in the same folder as your .py file.
 
 Be sure the batch file has double quotes (") and the 'start in' is the python executable in the SAME directory as your python code.
