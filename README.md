@@ -1,5 +1,5 @@
 # Readme
-Runs a search in the Ivanti ticketing system for an open ticket. Then uses win32 outlook client package to sync to a local Outlook account. Sends output JSON from the Ivanti Service Manager API in the body of the email if necessary. 
+Runs a search in the Ivanti ticketing system for an open ticket. Then uses win32 outlook client package to sync to a local Outlook account. Sends output JSON from the Ivanti Service Manager API in the body of the email if necessary. *Update 10/3/2022 Added PS1 code for easy streamline without installing python/packages.*
 
 This is what the Outlook client response would look like when there are live tickets open in the queue: 
 
