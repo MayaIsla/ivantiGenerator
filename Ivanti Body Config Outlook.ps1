@@ -15,7 +15,7 @@ $headers = @{
 }
 
 
-$GetMethod = Invoke-RestMethod -Method 'Get' -Uri "https://becn.saasit.com/api/odata/businessobject/businessobject/NameofSavedSearch?ActionID=ActionIDfromMetaData" -Headers $headers
+$GetMethod = Invoke-RestMethod -Method 'Get' -Uri "https://tenant.url/api/odata/businessobject/businessobject/NameofSavedSearch?ActionID=ActionIDfromMetaData" -Headers $headers
 
 
 #$outlook = new-object -comobject outlook.application
